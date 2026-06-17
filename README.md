@@ -455,3 +455,26 @@ We want to see your thoughts and reasoning process, not the green checkmarks. Sh
 
 ![Agent answer endpoint](screenshots_vm/agent_answer.png)
 
+## Evaluation
+
+I implemented an execution-accuracy evaluator in `evals/run_eval.py`.
+
+The evaluator:
+- loads questions from `evals/eval_set.jsonl`;
+- calls the running agent endpoint;
+- executes both the predicted SQL and the gold SQL;
+- canonicalizes result rows;
+- reports final accuracy and per-iteration accuracy.
+
+Baseline evaluation result:
+
+- num_questions: 30
+- final_accuracy: 0.3333333333333333
+- correct_final: 10
+- agent_error_count: 0
+- gold_error_count: 0
+- max_iterations_observed: 3
+- avg_latency_seconds: 0.906447240200032
+
+Full evaluation output is saved in `results/eval_baseline.json`.
+
