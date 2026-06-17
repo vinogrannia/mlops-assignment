@@ -437,3 +437,21 @@ We want to see your thoughts and reasoning process, not the green checkmarks. Sh
 | **Eval rigor** (Phase 5) | 15% | Correct execution-accuracy comparison (canonicalized row sets), overall + per-iteration pass rate, and an honest read on whether the loop earns its keep. |
 | **SLO diagnosis & iteration** (Phase 6) | 25% | A metric-grounded iteration log - *"saw X → hypothesized Y → changed Z → result W"* - with before/after evidence the targeted metric moved, and whether end-to-end latency *and* quality followed. Diagnosis quality counts more than hitting the number. |
 | **Report & communication** (Phase 7) | 15% | `REPORT.md` clear, honest about misses, ≤3 pages, and "what I'd do with more time" is specific (not "add Kubernetes"). |
+## VM deployment screenshots
+
+### NVIDIA H100 GPU with vLLM loaded
+
+![NVIDIA H100 GPU](screenshots_vm/nvidia_smi.png)
+
+### vLLM model server and manual inference
+
+![vLLM inference](screenshots_vm/vllm_inference.png)
+
+### vLLM Prometheus metrics endpoint
+
+![vLLM metrics](screenshots_vm/vllm_metrics.png)
+
+### Agent API smoke test
+
+![Agent answer endpoint](screenshots_vm/agent_answer.png)
+
